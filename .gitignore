@@ -1,0 +1,16 @@
+# Disallowed
+/screenshots
+/src/logs/
+/node_modules
+/.vscode/*
+.env*
+/tmp*
+/temp*
+/docs*
+/tests/event.json
+/dist*
+/dist/*
+
+# Allowed
+!/.vscode/launch.json
+!.env.example

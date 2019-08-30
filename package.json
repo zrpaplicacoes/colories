@@ -1,0 +1,55 @@
+{
+  "name": "@zrpaplicacoes/colories",
+  "version": "0.1.1",
+  "description": "A lightweight library for color calculation and generation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "commit": "git cz",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zrpaplicacoes/colories.git"
+  },
+  "keywords": [
+    "color",
+    "luminance",
+    "spectrum",
+    "hue",
+    "rgb",
+    "rgba"
+  ],
+  "author": "Pedro Gryzinsky <pedro.gryzinsky@zrp.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zrpaplicacoes/colories/issues"
+  },
+  "homepage": "https://github.com/zrpaplicacoes/colories#readme",
+  "files": [
+    "dist/**/*"
+  ],
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.19.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.6.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
